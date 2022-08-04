@@ -45,6 +45,6 @@ var x = "foo"
 x = x.toUpperCase()
 println(x)
 
-def literalToUpper(s: String, f: String => String): String
-val y = literalToUpper("foo bar", x => x.toUpperCase())
+def literalToUpper(s: String, f: String => String): String = f(s)
+val y = literalToUpper(s = s"""'foo bar'""", x => x.toUpperCase())
 println(y)
