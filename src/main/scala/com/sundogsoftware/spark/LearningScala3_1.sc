@@ -11,6 +11,14 @@ def cubeIt2(x : Int) : Int = {squareIt(x) * x}
 
 println(squareIt(2), cubeIt(3), cubeIt2(3))
 
+def nomeCompleto(nome: String, f: String => String): String = {f(nome)}
+def sobrenome(nome: String): String = {nome + " Luz"}
+val nome = "Mateus"
+var resultado = nomeCompleto(nome, sobrenome)
+println(resultado) // Mateus Luz
+resultado = nomeCompleto("Mateus", x => x + " Costa Luz")
+println(resultado) // Mateus Costa Luz
+
 def transformInt(x : Int, f: Int => Int): Int = {
   f(x)
 }
