@@ -5,9 +5,8 @@ import org.apache.spark._
 
 /** Count up how many of each star rating exists in the MovieLens 100K data set. */
 object ARatingsCounter extends App {
-
-  /** Our main function where the action happens */
-  /** def main(args: Array[String]) { */
+/** Our main function where the action happens */
+/** def main(args: Array[String]) { */
    
   // Set the log level to only print errors
   Logger.getLogger("org").setLevel(Level.ERROR)
@@ -30,4 +29,5 @@ object ARatingsCounter extends App {
 
   // Print each result on its own line.
   sortedResults.foreach(println)
+
 }
